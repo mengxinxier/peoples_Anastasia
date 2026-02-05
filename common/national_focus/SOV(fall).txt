@@ -1,0 +1,445 @@
+#!gfx:interface\SOV.gfx
+#!gfx:interface\UKR.gfx
+focus_tree = {
+	id = SOV_fall_focus
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = {
+		x = 700
+		y = 1200
+	}
+	##丢人现眼
+	focus = {
+		id = SOV_Shameful_display
+		icon = GFX_goal_DKB_Liberation_Arm
+		x = 10
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = -0.2
+			add_war_support = -0.4
+		}
+	}
+	##重铸红军
+	focus = {
+		id = SOV_Reforge_the_Red_Army
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Shameful_display
+		}
+		relative_position_id = SOV_Shameful_display
+		x = -4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##更多政委
+	focus = {
+		id = SOV_More_political_commissars
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Reforge_the_Red_Army
+		}
+		relative_position_id = SOV_Reforge_the_Red_Army
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##前线督战队
+	focus = {
+		id = SOV_Frontline_barrier_troops
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_More_political_commissars
+		}
+		relative_position_id = SOV_More_political_commissars
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##抹除失败主义情绪
+	focus = {
+		id = SOV_Erase_defeatist_sentiment
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Frontline_barrier_troops
+		}
+		relative_position_id = SOV_Frontline_barrier_troops
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##重建最高指挥部
+	focus = {
+		id = SOV_Reconstruct_the_Supreme_Command
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Reforge_the_Red_Army
+		}
+		relative_position_id = SOV_Reforge_the_Red_Army
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##无能即罪孽
+	focus = {
+		id = SOV_Incompetence_is_a_sin
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Reconstruct_the_Supreme_Command
+		}
+		relative_position_id = SOV_Reconstruct_the_Supreme_Command
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##一切为了前线
+	focus = {
+		id = SOV_Everything_for_the_front
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Incompetence_is_a_sin
+		}
+		relative_position_id = SOV_Incompetence_is_a_sin
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##不择手段地前进
+	focus = {
+		id = SOV_Advance_at_all_costs
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Erase_defeatist_sentiment
+		}
+		prerequisite = {
+			focus = SOV_Everything_for_the_front
+		}
+		relative_position_id = SOV_Everything_for_the_front
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##暂闭政治局
+	focus = {
+		id = SOV_Suspend_the_Politburo
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Shameful_display
+		}
+		relative_position_id = SOV_Shameful_display
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##逮捕“樱派”
+	focus = {
+		id = SOV_Arrest_the_Sakura_faction
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Suspend_the_Politburo
+		}
+		relative_position_id = SOV_Suspend_the_Politburo
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##大批提拔效忠派
+	focus = {
+		id = SOV_Promote_loyalists_en_masse
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Arrest_the_Sakura_faction
+		}
+		relative_position_id = SOV_Arrest_the_Sakura_faction
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##对极端者的利用
+	focus = {
+		id = SOV_Exploit_the_extremists
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Promote_loyalists_en_masse
+		}
+		relative_position_id = SOV_Promote_loyalists_en_masse
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = SOV_Stalwart_Communism
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##极致爱国主义
+	focus = {
+		id = SOV_Extreme_patriotism
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Exploit_the_extremists
+		}
+		relative_position_id = SOV_Exploit_the_extremists
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##坚定共产主义
+	focus = {
+		id = SOV_Stalwart_Communism
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Promote_loyalists_en_masse
+		}
+		relative_position_id = SOV_Promote_loyalists_en_masse
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = SOV_Exploit_the_extremists
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##打击内部之敌
+	focus = {
+		id = SOV_Strike_the_internal_enemy
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Stalwart_Communism
+		}
+		relative_position_id = SOV_Stalwart_Communism
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##宣布紧急戒严
+	focus = {
+		id = SOV_Declare_emergency_martial_law
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Shameful_display
+		}
+		relative_position_id = SOV_Shameful_display
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##围捕抗议者
+	focus = {
+		id = SOV_Round_up_protesters
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Declare_emergency_martial_law
+		}
+		relative_position_id = SOV_Declare_emergency_martial_law
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##实行言论管制
+	focus = {
+		id = SOV_Enforce_speech_control
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Round_up_protesters
+		}
+		relative_position_id = SOV_Round_up_protesters
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##统一思想指挥
+	focus = {
+		id = SOV_Unify_ideological_command
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Enforce_speech_control
+		}
+		relative_position_id = SOV_Enforce_speech_control
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##全联盟人民战争
+	focus = {
+		id = SOV_All_Union_Peoples_War
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Unify_ideological_command
+		}
+		relative_position_id = SOV_Unify_ideological_command
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##联盟的崭新黎明
+	focus = {
+		id = SOV_A_New_Dawn_for_the_Union
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = SOV_Advance_at_all_costs
+		}
+		prerequisite = {
+			focus = SOV_Extreme_patriotism
+			focus = SOV_Strike_the_internal_enemy
+		}
+		prerequisite = {
+			focus = SOV_All_Union_Peoples_War
+		}
+		relative_position_id = SOV_Extreme_patriotism
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+}

@@ -1,0 +1,90 @@
+
+
+scripted_gui = {
+	Anastasia_Diplomacy_Ideology = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "Anastasia_Diplomacy_Ideology"
+		properties = {
+			Diplomacy_country_leader_picture = {
+				image = "[Country_leader_picture_UKR]"
+			}
+		}
+		visible = {
+			tag = UKR
+		}
+	}
+}
+
+scripted_gui = {
+	Anastasia_another_country_leader_view = {
+		context_type = player_context
+		window_name = "Anastasia_another_country_leader_view"
+		parent_window_token = politics_tab
+		properties = {
+			country_leader_picture = {
+				image = "[Country_leader_picture_UKR]"
+			}
+		}
+		triggers = {
+		}
+		visible = {
+			tag = UKR
+		}
+		effects = {
+		}
+	}
+}
+
+##不可避免的战争
+scripted_gui = {
+	UKR_Inevitable_war_window = {
+		context_type = decision_category
+		window_name = "UKR_Inevitable_war_window"
+		visible = {
+		}
+		triggers = {
+		}
+		properties = {
+			Weapon_stockpile_progress = {
+				frame = Weapon_stockpile_var
+			}
+			peoples_support_progress = {
+				frame = Peoples_Support_var
+			}
+		}
+		effects = {
+		}
+		dynamic_lists = {
+		}
+	}
+	RUS_Transcending_Mortality_Protocol_window = {
+		context_type = decision_category
+		window_name = "RUS_Transcending_Mortality_Protocol_window"
+		visible = {
+		}
+		triggers = {
+			Anastasia_condition_1_visible = {
+				check_variable = { health_status_of_Anastasia_var > 0 }
+				check_variable = { health_status_of_Anastasia_var < 31 }
+			}
+			Anastasia_condition_2_visible = {
+				check_variable = { health_status_of_Anastasia_var > 30 }
+				check_variable = { health_status_of_Anastasia_var < 61 }
+			}
+			Anastasia_condition_3_visible = {
+				check_variable = { health_status_of_Anastasia_var > 60 }
+				check_variable = { health_status_of_Anastasia_var < 81 }
+			}
+			Anastasia_condition_4_visible = {
+				check_variable = { health_status_of_Anastasia_var > 80 }
+			}
+		}
+		properties = {
+		}
+		effects = {
+		}
+		dynamic_lists = {
+		}
+	}
+}

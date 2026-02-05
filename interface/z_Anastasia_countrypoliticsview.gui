@@ -1,0 +1,220 @@
+
+guiTypes = {#外交界面
+    containerWindowType = {
+		name = "Anastasia_Diplomacy_Ideology"
+		position = { x = 365 y = 133 }
+		iconType = {
+			name = "Diplomacy_country_leader_picture"
+			position = { x = -220 y = -13 }
+			pdx_tooltip = UKR_another_country_leader_Diplomacy_desc
+			scale = 0.74
+			pdx_tooltip_delayed = UKR_another_country_leader_Diplomacy_desc_2
+		}
+		iconType = {
+			name = "diplo_leader_frame"
+			position = { x =-226 y = -18 }
+			spriteType = "GFX_diplo_leader_frame"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "diplo_leader_frame_1"
+			position = { x =-352 y = -18 }
+			spriteType = "GFX_diplo_leader_frame"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "leader_frame_1"
+			spriteType = "GFX_adorable_heart_leader_name_frame"
+			position = { x = -226 y = 141 }		
+			alwaystransparent = yes
+			scale = 0.76
+		}
+		iconType = {
+			name = "leader_frame_2"
+			spriteType = "GFX_adorable_heart_leader_name_frame"
+			position = { x = -352 y = 141 }		
+			alwaystransparent = yes
+			scale = 0.76
+		}
+		####第一位领袖
+		instantTextboxType = {
+			name = "Diplomacy_leader_name"
+			position = { x = -345 y = 146 }
+			font = "hoi_16mbs"
+			text = "leader_name_1"
+			maxWidth = 115
+			maxHeight = 20
+			format = center
+			fixedsize = yes
+		}
+		
+		####第二位领袖
+		instantTextboxType = {
+			name = "Diplomacy_leader_name_2"
+			position = { x = -218 y = 146 }
+			font = "hoi_16mbs"
+			text = "[country_leader_name_UKR]"
+			maxWidth = 115
+			maxHeight = 20
+			format = center
+			fixedsize = yes
+		}
+	}
+}
+
+guiTypes = {
+	containerWindowType = {#另一位领袖
+		name = "Anastasia_another_country_leader_view"
+		position = { x = 165 y = 0 }
+		size = { width = 32 height = 32 }
+		iconType = {
+			name = "country_leader_picture" 
+			position = { x = 18 y = 58 }
+			pdx_tooltip = UKR_another_country_leader_desc
+			pdx_tooltip_delayed = UKR_another_country_leader_desc_2
+		}
+		containerWindowType = {
+			name = "coverup_0"
+			position = { x = 10 y = 44 }
+			size = { width = 180  height = 254 }
+			clipping = yes
+
+			containerWindowType = {
+				name = "coverup_0_bg"
+				position = { x = 0   y = 0 }
+				size = { width = 180 height = 380 }
+				#background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				iconType = {
+					name = "leader_frame2"
+					spriteType = "GFX_pol_leader_frame"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+		}
+		instantTextboxType = {
+			name = "country_leader_name"
+			position = { x = 18 y = 262 }
+			font = "hoi_18mbs"
+			text = "[country_leader_name_UKR]"
+			maxWidth = 155
+			maxHeight = 36
+			format = center
+			vertical_alignment = center
+		}
+	}
+}
+
+#不可避免的战争
+guiTypes = {
+	containerWindowType = {
+		name = "UKR_Inevitable_war_window"
+		position = { x = 100 y = 100 }
+		size = { width = 510 height= 620 }
+		background = {
+			name = "blackground"
+			spriteType = "GFX_AH_tiled_bg"
+		}
+		instantTextboxType = {
+			name = "UKR_Inevitable_war_window_desc"
+			position = { x = 20 y = 20 }
+			font = "hoi_18mbs"
+			text = "UKR_Inevitable_war_window_desc"
+			maxWidth = 470
+			maxHeight = 360
+			format = left
+		}
+		iconType = {
+			name ="blackground_icon"
+			spriteType = "GFX_UKR_Inevitable_war_bg"
+			alwaystransparent = yes
+			position = { x = 133 y = 140 }
+		}
+		instantTextboxType = {
+			name = "Weapon_stockpile_title"
+			position = { x = 20 y = 435 }
+			font = "Lines_24"
+			text = "Weapon_stockpile_title"
+			maxWidth = 510
+			maxHeight = 36
+			format = left
+		}
+		iconType = {
+			name ="Weapon_stockpile_progress"
+			spriteType = "GFX_ENG_progess_1_red_vertical"
+			alwaystransparent = yes
+			position = { x = 20 y = 470 }
+		}
+		instantTextboxType = {
+			name = "Weapon_stockpile_modifier"
+			position = { x = 50 y = 470 }
+			font = "hoi_18mbs"
+			text = "Weapon_stockpile_modifier"
+			maxWidth = 470
+			maxHeight = 360
+			format = left
+		}
+		instantTextboxType = {
+			name = "Peoples_support_title"
+			position = { x = 265 y = 435 }
+			font = "Lines_24"
+			text = "Peoples_support_title"
+			maxWidth = 490
+			maxHeight = 36
+			format = left
+		}
+		iconType = {
+			name ="peoples_support_progress"
+			spriteType = "GFX_ENG_progess_1_blue_vertical"
+			alwaystransparent = yes
+			position = { x = 265 y = 470 }
+		}
+		instantTextboxType = {
+			name = "Peoples_support_modifier"
+			position = { x = 315 y = 470 }
+			font = "hoi_18mbs"
+			text = "Peoples_support_modifier"
+			maxWidth = 470
+			maxHeight = 360
+			format = left
+		}
+	}
+}
+
+#跨越死亡
+guiTypes = {
+	containerWindowType = {
+		name = "RUS_Transcending_Mortality_Protocol_window"
+		position = { x = 100 y = 100 }
+		size = { width = 510 height= 200 }
+		background = {
+			name = "blackground"
+			spriteType = "GFX_spare"
+		}
+		iconType = {
+			name ="Anastasia_condition_1"
+			spriteType = "GFX_Anastasia_condition_1"
+			alwaystransparent = yes
+			position = { x = 20 y = 10 }
+		}
+		iconType = {
+			name ="Anastasia_condition_2"
+			spriteType = "GFX_Anastasia_condition_2"
+			alwaystransparent = yes
+			position = { x = 20 y = 10 }
+		}
+		iconType = {
+			name ="Anastasia_condition_3"
+			spriteType = "GFX_Anastasia_condition_3"
+			alwaystransparent = yes
+			position = { x = 20 y = 10 }
+		}
+		iconType = {
+			name ="Anastasia_condition_4"
+			spriteType = "GFX_Anastasia_condition_4"
+			alwaystransparent = yes
+			position = { x = 20 y = 10 }
+		}
+	}
+}

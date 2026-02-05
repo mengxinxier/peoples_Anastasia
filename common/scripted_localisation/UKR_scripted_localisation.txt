@@ -1,0 +1,42 @@
+
+defined_text = {
+	name = Get_UKR_Inevitable_war_window_desc
+	text = {
+		trigger = {
+			has_war_with = SOV
+		}
+		localization_key = UKR_Inevitable_war_window_desc2
+	}
+	##通用
+	text = {
+		localization_key = UKR_Inevitable_war_window_desc1
+	}
+}
+defined_text = {
+	name = health_status_of_Anastasia
+	text = {
+		trigger = {
+			check_variable = { health_status_of_Anastasia_var > 0 }
+			check_variable = { health_status_of_Anastasia_var < 31 }
+		}
+		localization_key = critically_ill
+	}
+	text = {
+		trigger = {
+			check_variable = { health_status_of_Anastasia_var > 30 }
+			check_variable = { health_status_of_Anastasia_var < 61 }
+		}
+		localization_key = at_deaths_door
+	}
+	text = {
+		trigger = {
+			check_variable = { health_status_of_Anastasia_var > 60 }
+			check_variable = { health_status_of_Anastasia_var < 81 }
+		}
+		localization_key = recovering_slightly
+	}
+	##通用
+	text = {
+		localization_key = fully_recovered
+	}
+}

@@ -1,0 +1,122 @@
+##另外一位国家领袖头像
+defined_text = {
+	name = Country_leader_picture_UKR
+	text = {
+		trigger = {
+			has_idea = UKR_kaduoke_idea
+		}
+		localization_key = GFX_kaduoke
+	}
+	text = {
+		trigger = {
+			has_idea = UKR_Kornilov_idea
+		}
+		localization_key = GFX_UKR_Kornilov
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Kazembek_idea
+		}
+		localization_key = GFX_RUS_Kazembek
+	}
+	##通用
+	text = {
+		localization_key = GFX_leader_unknown
+	}
+}
+
+##另外一位国家领袖名字
+defined_text = {
+	name = country_leader_name_UKR
+	text = {
+		trigger = {
+			has_idea = UKR_kaduoke_idea
+		}
+		localization_key = UKR_kaduoke
+	}
+	text = {
+		trigger = {
+			has_idea = UKR_Kornilov_idea
+		}
+		localization_key = UKR_Kornilov
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Kazembek_idea
+		}
+		localization_key = RUS_Kazembek
+	}
+	##通用
+	text = {
+		localization_key = none_another_leader
+	}
+}
+
+##另外一位国家领袖介绍--姓名及buff
+defined_text = {
+	name = Another_country_leader_desc_UKR
+	text = {
+		trigger = {
+			has_idea = UKR_kaduoke_idea
+		}
+		localization_key = UKR_kaduoke_pol_desc
+	}
+	text = {
+		trigger = {
+			has_idea = UKR_Kornilov_idea
+		}
+		localization_key = UKR_Kornilov_pol_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Kazembek_idea
+		}
+		localization_key = RUS_Kazembek_pol_desc
+	}
+}
+
+####另外一位国家领袖介绍--姓名及buff--外交界面
+defined_text = {
+	name = Another_country_leader_Diplomacy_desc_UKR
+	text = {
+		trigger = {
+			has_idea = UKR_kaduoke_idea
+		}
+		localization_key = UKR_kaduoke_dip_desc
+	}
+	text = {
+		trigger = {
+			has_idea = UKR_Kornilov_idea
+		}
+		localization_key = UKR_Kornilov_dip_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Kazembek_idea
+		}
+		localization_key = RUS_Kazembek_dip_desc
+	}
+}
+
+##另外一位国家领袖介绍--生平
+defined_text = {
+	name = Another_country_leader_desc_2_UKR
+	text = {
+		trigger = {
+			has_idea = UKR_kaduoke_idea
+		}
+		localization_key = UKR_kaduoke_desc
+	}
+	text = {
+		trigger = {
+			has_idea = UKR_Kornilov_idea
+		}
+		localization_key = UKR_Kornilov_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Kazembek_idea
+		}
+		localization_key = RUS_Kazembek_desc
+	}
+}

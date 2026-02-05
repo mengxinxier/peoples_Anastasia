@@ -1,0 +1,35 @@
+RUS_national_investment_bank = {
+	icon = GFX_idea_ROM_king_carol_ii_hedonist
+
+	production_speed_industrial_complex_factor = RUS_NIB_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = RUS_NIB_production_speed_arms_factory_factor
+	research_speed_factor = RUS_NIB_research_speed_factor
+	local_resources_factor = RUS_NIB_local_resources_factor
+	global_building_slots_factor = RUS_NIB_global_building_slots_factor
+	consumer_goods_factor = RUS_NIB_consumer_goods_factor
+}
+
+BAL_coastal_economy = {
+	icon = GFX_trait_state_economy
+
+	local_building_slots = 4
+	state_production_speed_buildings_factor = 0.15
+}
+
+UKR_Weapon_stockpile_modifier = {
+	army_attack_factor = ukr_wsm_army_attack_factor_var  ##max 0.2
+	army_defence_factor = ukr_wsm_army_attack_factor_var  ##max 0.2
+	breakthrough_factor = ukr_wsm_army_attack_factor_var  ##max 0.2
+	planning_speed = ukr_wsm_army_attack_factor_var  ##max 0.2
+	max_planning = ukr_wsm_army_attack_factor_var  ##max 0.2
+	planning_decay_rate_factor = ukr_wsm_army_attack_factor_var  ##max 0.2
+}
+
+UKR_Peoples_support_modifier = {
+	stability_factor = ukr_psm_stability_factor  ##max 0.25
+	war_support_factor = ukr_psm_stability_factor  ##max 0.25
+	political_power_factor = ukr_psm_political_power_factor  ##max 0.2
+	industrial_capacity_factory = ukr_psm_political_power_factor  ##max 0.2
+	production_factory_max_efficiency_factor = ukr_psm_political_power_factor  ##max 0.2
+	production_factory_efficiency_gain_factor = ukr_psm_political_power_factor  ##max 0.2
+}

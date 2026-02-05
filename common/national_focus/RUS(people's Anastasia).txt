@@ -1,0 +1,2121 @@
+focus_tree = {
+	id = RUS_focus_people_Anastasia
+	country = {
+		factor = 0
+		modifier = {
+			tag = UKR
+			is_debug = yes
+			add = 200
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 700
+		y = 5000
+	}
+	##帝国归来
+	focus = {
+		id = RUS_The_Empire_Returns
+		icon = GFX_goal_DKB_Liberation_Arm
+		x = 10
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = RUS_The_Empire_Returns_tt
+			add_stability = 0.1
+			add_war_support = 0.1
+			custom_effect_tooltip = change_country_leader_description
+			set_country_leader_description = {
+				ideology = neutrality
+				desc = RUS_Anastasia_desc
+			}
+			set_portraits = {
+				character = SOV_Anastasia
+				civilian = {
+					large = "gfx/leaders/UKR/Anastasia1.dds"
+				}
+			}
+		}
+	}
+	##加冕沙皇
+	focus = {
+		id = RUS_Crowning_the_Tsar
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_The_Empire_Returns
+		}
+		relative_position_id = RUS_The_Empire_Returns
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.50
+			}
+		}
+	}
+	##兑现承诺
+	focus = {
+		id = RUS_Fulfilling_the_promise
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Crowning_the_Tsar
+		}
+		relative_position_id = RUS_Crowning_the_Tsar
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	##实现自治
+	focus = {
+		id = RUS_Achieve_Autonomy
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Fulfilling_the_promise
+		}
+		relative_position_id = RUS_Fulfilling_the_promise
+		x = -2
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.51
+			}
+		}
+	}
+	##杜马选举
+	focus = {
+		id = RUS_Duma_elections
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Fulfilling_the_promise
+		}
+		relative_position_id = RUS_Fulfilling_the_promise
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.52
+			}
+		}
+	}
+	##解放人民
+	focus = {
+		id = RUS_Liberate_the_people
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Fulfilling_the_promise
+		}
+		relative_position_id = RUS_Fulfilling_the_promise
+		x = 2
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.53
+			}
+		}
+	}
+	##帝国复兴
+	focus = {
+		id = RUS_Imperial_Restoration
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Achieve_Autonomy
+		}
+		prerequisite = {
+			focus = RUS_Duma_elections
+		}
+		prerequisite = {
+			focus = RUS_Liberate_the_people
+		}
+		relative_position_id = RUS_Duma_elections
+		allow_branch = {
+			not = { has_country_flag = entry_peoples_Anastasia_route }
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_Imperial_Restoration_trigger_tt
+				always = no
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = RUS_Imperial_Restoration_tt
+		}
+	}
+	##失乐园
+	focus = {
+		id = RUS_Paradise_Lost
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Achieve_Autonomy
+		}
+		prerequisite = {
+			focus = RUS_Duma_elections
+		}
+		prerequisite = {
+			focus = RUS_Liberate_the_people
+		}
+		relative_position_id = RUS_Duma_elections
+		allow_branch = {
+			has_country_flag = entry_peoples_Anastasia_route
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = RUS_Paradise_Lost_tt
+		}
+	}
+	##血染红场
+	focus = {
+		id = RUS_Blood_on_Red_Square
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Paradise_Lost
+		}
+		relative_position_id = RUS_Paradise_Lost
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+	##荆棘之剑
+	focus = {
+		id = RUS_Sword_of_Thorns
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Blood_on_Red_Square
+		}
+		relative_position_id = RUS_Blood_on_Red_Square
+		mutually_exclusive = {
+			focus = RUS_Tears_of_Moscow
+		}
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Sword_of_Thorns_unlock
+		}
+		available = {
+			has_country_flag = RUS_Sword_of_Thorns_unlock
+		}
+		completion_reward = {
+			custom_effect_tooltip = Come_explore_later
+			hidden_effect = {
+				news_event = {
+					id = rus_news.22
+				}
+			}
+		}
+	}
+	##莫斯科之泪
+	focus = {
+		id = RUS_Tears_of_Moscow
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Blood_on_Red_Square
+		}
+		relative_position_id = RUS_Blood_on_Red_Square
+		mutually_exclusive = {
+			focus = RUS_Sword_of_Thorns
+		}
+		x = 0
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Tears_of_Moscow_unlock
+		}
+		available = {
+			has_country_flag = RUS_Tears_of_Moscow_unlock
+		}
+		completion_reward = {
+			set_country_flag = RUS_Transcending_Mortality_Protocol_visible
+			unlock_decision_category_tooltip = RUS_Transcending_Mortality_Protocol
+			activate_mission = RUS_golden_window_for_treatment
+			activate_mission = RUS_Anastasias_condition_worsening
+			set_country_flag = RUS_stepping_into_shadows_visible
+			unlock_decision_category_tooltip = RUS_stepping_into_shadows
+			activate_mission = RUS_stepping_into_shadows_decision
+		}
+	}
+	##光自暗来
+	focus = {
+		id = RUS_Light_from_the_Dark
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Tears_of_Moscow
+		}
+		relative_position_id = RUS_Tears_of_Moscow
+		mutually_exclusive = {
+			focus = RUS_The_Long_Night
+		}
+		x = -1
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		cancelable = no
+		available = {
+			has_country_flag = RUS_Anastasia_come_back
+			has_country_flag = RUS_sharpening_the_sword
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.63
+			}
+		}
+	}
+	##破晓时分
+	focus = {
+		id = RUS_The_Moment_of_Dawn
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Light_from_the_Dark
+		}
+		relative_position_id = RUS_Light_from_the_Dark
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			Cut_RUS_panic_stricken_imperial_army = yes
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			set_party_name = { ideology = neutrality long_name = RUS_imperial_provisional_council_party name = RUS_imperial_provisional_council_party }
+			set_party_name = { ideology = fascism long_name = ban_the_party name = ban_the_party }
+			set_party_name = { ideology = democratic long_name = RUS_Russian_Democratic_Party name = RUS_Russian_Democratic_Party }
+			set_party_name = { ideology = communism long_name = RUS_Youth_Octobrist_Party name = RUS_Youth_Octobrist_Party }
+			custom_effect_tooltip = change_country_leader_description
+			set_country_leader_description = {
+				ideology = neutrality
+				desc = RUS_Anastasia_desc2
+			}
+			set_portraits = {
+				character = SOV_Anastasia
+				civilian = {
+					large = "gfx/leaders/UKR/Anastasia3.dds"
+				}
+			}
+		}
+	}
+	##曙光初现
+	focus = {
+		id = RUS_First_Light_Appears
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_The_Moment_of_Dawn
+		}
+		relative_position_id = RUS_The_Moment_of_Dawn
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.64
+			}
+		}
+	}
+	##新一天的黎明
+	focus = {
+		id = RUS_Dawn_of_a_New_Day
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_First_Light_Appears
+		}
+		relative_position_id = RUS_First_Light_Appears
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = ukr_politics.65
+			}
+		}
+	}
+	##漫漫长夜
+	focus = {
+		id = RUS_The_Long_Night
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Tears_of_Moscow
+		}
+		relative_position_id = RUS_Tears_of_Moscow
+		mutually_exclusive = {
+			focus = RUS_Light_from_the_Dark
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##崭新起点
+	focus = {
+		id = RUS_Fresh_Beginning
+		icon = GFX_goal_DKB_Liberation_Arm
+		x = 40
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Youth_Octobrist_Party_flag
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##不念旧恶
+	focus = {
+		id = RUS_Burying_the_Hatchet
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Fresh_Beginning
+		}
+		relative_position_id = RUS_Fresh_Beginning
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##踏步前行
+	focus = {
+		id = RUS_Stride_Ahead
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Fresh_Beginning
+		}
+		relative_position_id = RUS_Fresh_Beginning
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##不怀旧恨
+	focus = {
+		id = RUS_No_Lingering_Resentment
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Fresh_Beginning
+		}
+		relative_position_id = RUS_Fresh_Beginning
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##为人民，向未来
+	focus = {
+		id = RUS_For_the_People_Toward_the_Future
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Burying_the_Hatchet
+		}
+		prerequisite = {
+			focus = RUS_Stride_Ahead
+		}
+		prerequisite = {
+			focus = RUS_No_Lingering_Resentment
+		}
+		relative_position_id = RUS_Stride_Ahead
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##如有不义，就由我们来对抗
+	focus = {
+		id = RUS_Against_All_Iniquity
+		icon = GFX_goal_DKB_Liberation_Arm
+		relative_position_id = RUS_For_the_People_Toward_the_Future
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Youth_Octobrist_Party_flag
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##帝国军队大改革
+	focus = {
+		id = RUS_Great_Imperial_Military_Reform
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Against_All_Iniquity
+		}
+		relative_position_id = RUS_Against_All_Iniquity
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##教育我们的子弟兵
+	focus = {
+		id = RUS_Educating_Our_Sons_and_Brothers_in_Arms
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Great_Imperial_Military_Reform
+		}
+		relative_position_id = RUS_Great_Imperial_Military_Reform
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##帝国军队现代化
+	focus = {
+		id = RUS_Modernizing_the_Imperial_Military
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Educating_Our_Sons_and_Brothers_in_Arms
+		}
+		relative_position_id = RUS_Educating_Our_Sons_and_Brothers_in_Arms
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##天上猛禽
+	focus = {
+		id = RUS_Raptors_of_the_Heavens
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Modernizing_the_Imperial_Military
+		}
+		relative_position_id = RUS_Modernizing_the_Imperial_Military
+		x = -4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##开发新时代战机
+	focus = {
+		id = RUS_Developing_New_Era_Fighters
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Raptors_of_the_Heavens
+		}
+		relative_position_id = RUS_Raptors_of_the_Heavens
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##保卫祖国蓝天
+	focus = {
+		id = RUS_Guarding_the_Ancestral_Blue
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Developing_New_Era_Fighters
+		}
+		relative_position_id = RUS_Developing_New_Era_Fighters
+		mutually_exclusive = {
+			focus = RUS_Saturating_The_Surface
+		}
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##空中铁壁
+	focus = {
+		id = RUS_Aerial_Iron_Wall
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Guarding_the_Ancestral_Blue
+		}
+		relative_position_id = RUS_Guarding_the_Ancestral_Blue
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##火力倾泻地面
+	focus = {
+		id = RUS_Saturating_The_Surface
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Developing_New_Era_Fighters
+		}
+		relative_position_id = RUS_Developing_New_Era_Fighters
+		mutually_exclusive = {
+			focus = RUS_Guarding_the_Ancestral_Blue
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##陆空协调
+	focus = {
+		id = RUS_Land_Air_Coordination
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Saturating_The_Surface
+		}
+		relative_position_id = RUS_Saturating_The_Surface
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##地上猛虎
+	focus = {
+		id = RUS_Tigers_of_the_Surface
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Modernizing_the_Imperial_Military
+		}
+		relative_position_id = RUS_Modernizing_the_Imperial_Military
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##人民军队靠人民
+	focus = {
+		id = RUS_Army_Rooted_in_the_People
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Tigers_of_the_Surface
+		}
+		relative_position_id = RUS_Tigers_of_the_Surface
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##大炮与人海
+	focus = {
+		id = RUS_Cannons_and_Mass_Infantry
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Army_Rooted_in_the_People
+		}
+		relative_position_id = RUS_Army_Rooted_in_the_People
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##改进大纵深战略
+	focus = {
+		id = RUS_Refining_Deep_Operations_Strategy
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Cannons_and_Mass_Infantry
+		}
+		relative_position_id = RUS_Cannons_and_Mass_Infantry
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##人民军队向胜利
+	focus = {
+		id = RUS_Peoples_Army_Toward_Victory
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Tigers_of_the_Surface
+		}
+		relative_position_id = RUS_Tigers_of_the_Surface
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##装甲与科技
+	focus = {
+		id = RUS_Armor_and_Technology
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Peoples_Army_Toward_Victory
+		}
+		relative_position_id = RUS_Peoples_Army_Toward_Victory
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##逆向苏联天启研发
+	focus = {
+		id = RUS_Reverse_Engineering_Soviet_Apocalypse
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Armor_and_Technology
+		}
+		relative_position_id = RUS_Armor_and_Technology
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##海上蛟龙
+	focus = {
+		id = RUS_Oceanic_Flood_Dragons
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Modernizing_the_Imperial_Military
+		}
+		relative_position_id = RUS_Modernizing_the_Imperial_Military
+		x = 4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##坚持大舰队
+	focus = {
+		id = RUS_Adhering_to_the_Grand_Fleet_Doctrine
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Oceanic_Flood_Dragons
+		}
+		relative_position_id = RUS_Oceanic_Flood_Dragons
+		mutually_exclusive = {
+			focus = RUS_New_Concepts_New_Fleet
+		}
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##铁甲重炮
+	focus = {
+		id = RUS_Steel_Plates_and_Massive_Guns
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Adhering_to_the_Grand_Fleet_Doctrine
+		}
+		relative_position_id = RUS_Adhering_to_the_Grand_Fleet_Doctrine
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##基地打击
+	focus = {
+		id = RUS_Base_Strike
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Steel_Plates_and_Massive_Guns
+		}
+		relative_position_id = RUS_Steel_Plates_and_Massive_Guns
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##新理念，新舰队
+	focus = {
+		id = RUS_New_Concepts_New_Fleet
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Oceanic_Flood_Dragons
+		}
+		relative_position_id = RUS_Oceanic_Flood_Dragons
+		mutually_exclusive = {
+			focus = RUS_Adhering_to_the_Grand_Fleet_Doctrine
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##阴影之中
+	focus = {
+		id = RUS_Amidst_the_Gloom
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_New_Concepts_New_Fleet
+		}
+		relative_position_id = RUS_New_Concepts_New_Fleet
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##狼群战术
+	focus = {
+		id = RUS_Wolfpack_Tactics
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Amidst_the_Gloom
+		}
+		relative_position_id = RUS_Amidst_the_Gloom
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##值得守护的祖国
+	focus = {
+		id = RUS_Fatherland_to_Defend
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Base_Strike
+			focus = RUS_Wolfpack_Tactics
+		}
+		prerequisite = {
+			focus = RUS_Aerial_Iron_Wall
+			focus = RUS_Land_Air_Coordination
+		}
+		prerequisite = {
+			focus = RUS_Refining_Deep_Operations_Strategy
+		}
+		prerequisite = {
+			focus = RUS_Reverse_Engineering_Soviet_Apocalypse
+		}
+		relative_position_id = RUS_Refining_Deep_Operations_Strategy
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##如有弱小，就由我们来守护
+	focus = {
+		id = RUS_Protecting_the_Weak
+		icon = GFX_goal_DKB_Liberation_Arm
+		relative_position_id = RUS_For_the_People_Toward_the_Future
+		x = 10
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Youth_Octobrist_Party_flag
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##光复前帝国版图
+	focus = {
+		id = RUS_Restoring_Former_Imperial_Territories
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Protecting_the_Weak
+		}
+		relative_position_id = RUS_Protecting_the_Weak
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我们的外交前途
+	focus = {
+		id = RUS_Our_Diplomatic_Future
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Restoring_Former_Imperial_Territories
+		}
+		relative_position_id = RUS_Restoring_Former_Imperial_Territories
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##呼吁世界
+	focus = {
+		id = RUS_Appeal_to_the_World
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Our_Diplomatic_Future
+		}
+		relative_position_id = RUS_Our_Diplomatic_Future
+		mutually_exclusive = {
+			focus = RUS_Conforming_to_the_Times
+		}
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##红色君主大联合
+	focus = {
+		id = RUS_Red_Sovereign_Alliance
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Appeal_to_the_World
+		}
+		relative_position_id = RUS_Appeal_to_the_World
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##人民帝国国际
+	focus = {
+		id = RUS_Peoples_Imperial_International
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Red_Sovereign_Alliance
+		}
+		relative_position_id = RUS_Red_Sovereign_Alliance
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##播撒影响力
+	focus = {
+		id = RUS_Spreading_Influence
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Peoples_Imperial_International
+		}
+		relative_position_id = RUS_Peoples_Imperial_International
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##顺应时势
+	focus = {
+		id = RUS_Conforming_to_the_Times
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Our_Diplomatic_Future
+		}
+		relative_position_id = RUS_Our_Diplomatic_Future
+		mutually_exclusive = {
+			focus = RUS_Appeal_to_the_World
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##重申三国协约
+	focus = {
+		id = RUS_Reaffirming_the_Triple_Entente
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Conforming_to_the_Times
+		}
+		relative_position_id = RUS_Conforming_to_the_Times
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##真正的自由之子
+	focus = {
+		id = RUS_Real_Children_of_Freedom
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Reaffirming_the_Triple_Entente
+		}
+		relative_position_id = RUS_Reaffirming_the_Triple_Entente
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##自由国度的定海神针
+	focus = {
+		id = RUS_Stabilizing_Pillar_of_Liberty
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Real_Children_of_Freedom
+		}
+		relative_position_id = RUS_Real_Children_of_Freedom
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##令人骄傲的祖国
+	focus = {
+		id = RUS_Our_Proud_Motherland
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Spreading_Influence
+		}
+		prerequisite = {
+			focus = RUS_Stabilizing_Pillar_of_Liberty
+		}
+		relative_position_id = RUS_Stabilizing_Pillar_of_Liberty
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##当那一天来临......
+	focus = {
+		id = RUS_When_That_Day_Comes
+		icon = GFX_goal_DKB_Liberation_Arm
+		relative_position_id = RUS_For_the_People_Toward_the_Future
+		x = 16
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Youth_Octobrist_Party_flag
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##为了人民的幸福......
+	focus = {
+		id = RUS_For_Peoples_Wellbeing
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_When_That_Day_Comes
+		}
+		relative_position_id = RUS_When_That_Day_Comes
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##为了祖国的存续......
+	focus = {
+		id = RUS_For_the_Continuity_of_the_Motherland
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_For_Peoples_Wellbeing
+		}
+		relative_position_id = RUS_For_Peoples_Wellbeing
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##为了美好的明天......
+	focus = {
+		id = RUS_For_the_Glorious_Future
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_For_the_Continuity_of_the_Motherland
+		}
+		relative_position_id = RUS_For_the_Continuity_of_the_Motherland
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##稳固战争前线
+	focus = {
+		id = RUS_Stabilizing_the_War_Front
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_When_That_Day_Comes
+		}
+		relative_position_id = RUS_When_That_Day_Comes
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##借鉴政委制度
+	focus = {
+		id = RUS_Adopting_the_Commissar_System
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Stabilizing_the_War_Front
+		}
+		relative_position_id = RUS_Stabilizing_the_War_Front
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##科技强军的试炼
+	focus = {
+		id = RUS_Trial_of_Strengthening_Army_via_Tech
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Adopting_the_Commissar_System
+		}
+		relative_position_id = RUS_Adopting_the_Commissar_System
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##大雷雨行动
+	focus = {
+		id = RUS_Operation_Thunderstorm
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_For_the_Glorious_Future
+		}
+		prerequisite = {
+			focus = RUS_Trial_of_Strengthening_Army_via_Tech
+		}
+		relative_position_id = RUS_For_the_Glorious_Future
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##剑指魔导国心脏！
+	focus = {
+		id = RUS_Sword_at_the_Heart_of_DVL
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Operation_Thunderstorm
+		}
+		relative_position_id = RUS_Operation_Thunderstorm
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##祖国不会忘记
+	focus = {
+		id = RUS_Unforgotten_by_the_Nation
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Sword_at_the_Heart_of_DVL
+		}
+		relative_position_id = RUS_Sword_at_the_Heart_of_DVL
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##屹立世界的祖国
+	focus = {
+		id = RUS_The_Nation_Standing_Tall_in_the_World
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Unforgotten_by_the_Nation
+		}
+		relative_position_id = RUS_Unforgotten_by_the_Nation
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##如有不公，就由我们来消除
+	focus = {
+		id = RUS_Eliminating_Injustice_by_Our_Hand
+		icon = GFX_goal_DKB_Liberation_Arm
+		relative_position_id = RUS_For_the_People_Toward_the_Future
+		x = -10
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Youth_Octobrist_Party_flag
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##真正的工农权利保障
+	focus = {
+		id = RUS_Real_Guaranty_for_Laborers
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Eliminating_Injustice_by_Our_Hand
+		}
+		relative_position_id = RUS_Eliminating_Injustice_by_Our_Hand
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##拒绝“富祖国，穷人民”
+	focus = {
+		id = RUS_Rejecting_Rich_State_Poor_People
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Real_Guaranty_for_Laborers
+		}
+		relative_position_id = RUS_Real_Guaranty_for_Laborers
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##借鉴五年计划
+	focus = {
+		id = RUS_Adopting_Five_Year_Plans
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Rejecting_Rich_State_Poor_People
+		}
+		relative_position_id = RUS_Rejecting_Rich_State_Poor_People
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##大步迈进工业化
+	focus = {
+		id = RUS_Stiding_Forward_to_Industrialization
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Adopting_Five_Year_Plans
+		}
+		relative_position_id = RUS_Adopting_Five_Year_Plans
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##工业核心区建设
+	focus = {
+		id = RUS_Industrial_Core_Zone_Development
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Stiding_Forward_to_Industrialization
+		}
+		relative_position_id = RUS_Stiding_Forward_to_Industrialization
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##跨过乌拉尔山
+	focus = {
+		id = RUS_Beyond_the_Urals
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Industrial_Core_Zone_Development
+		}
+		relative_position_id = RUS_Industrial_Core_Zone_Development
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##追赶技术差距
+	focus = {
+		id = RUS_Closing_the_Tech_Gap
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Adopting_Five_Year_Plans
+		}
+		relative_position_id = RUS_Adopting_Five_Year_Plans
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##研究苏联遗留技术
+	focus = {
+		id = RUS_Researching_Soviet_Legacy_Tech
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Closing_the_Tech_Gap
+		}
+		relative_position_id = RUS_Closing_the_Tech_Gap
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##培养下一代人才
+	focus = {
+		id = RUS_Cultivating_Future_Cadres
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Researching_Soviet_Legacy_Tech
+		}
+		relative_position_id = RUS_Researching_Soviet_Legacy_Tech
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##不忘农民之贡献
+	focus = {
+		id = RUS_Never_Forget_the_Farmers_Sacrifice
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Adopting_Five_Year_Plans
+		}
+		relative_position_id = RUS_Adopting_Five_Year_Plans
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我为祖国产粮食
+	focus = {
+		id = RUS_Producing_Grain_for_the_Motherland
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Never_Forget_the_Farmers_Sacrifice
+		}
+		relative_position_id = RUS_Never_Forget_the_Farmers_Sacrifice
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##名副其实的欧洲粮仓
+	focus = {
+		id = RUS_Europes_Veritable_Breadbasket
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Producing_Grain_for_the_Motherland
+		}
+		relative_position_id = RUS_Producing_Grain_for_the_Motherland
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##齿轮飞转的祖国
+	focus = {
+		id = RUS_Our_Engine_of_Progress
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Beyond_the_Urals
+		}
+		prerequisite = {
+			focus = RUS_Cultivating_Future_Cadres
+		}
+		prerequisite = {
+			focus = RUS_Europes_Veritable_Breadbasket
+		}
+		relative_position_id = RUS_Cultivating_Future_Cadres
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##如有谬误，就由我们来纠正
+	focus = {
+		id = RUS_Correcting_Errors_by_Our_Resolve
+		icon = GFX_goal_DKB_Liberation_Arm
+		relative_position_id = RUS_For_the_People_Toward_the_Future
+		x = -16
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		allow_branch = {
+			has_country_flag = RUS_Youth_Octobrist_Party_flag
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##修订帝国宪法
+	focus = {
+		id = RUS_Amending_the_Imperial_Constitution
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Correcting_Errors_by_Our_Resolve
+		}
+		relative_position_id = RUS_Correcting_Errors_by_Our_Resolve
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我们所忽略的知识
+	focus = {
+		id = RUS_Our_Neglected_Wisdom
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Amending_the_Imperial_Constitution
+		}
+		relative_position_id = RUS_Amending_the_Imperial_Constitution
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我们所目睹的压迫
+	focus = {
+		id = RUS_Oppressions_Under_Our_Watch
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Our_Neglected_Wisdom
+		}
+		relative_position_id = RUS_Our_Neglected_Wisdom
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我们所知晓的腐败
+	focus = {
+		id = RUS_Corruption_Within_Our_Knowledge
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Oppressions_Under_Our_Watch
+		}
+		relative_position_id = RUS_Oppressions_Under_Our_Watch
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我们所回避的过去
+	focus = {
+		id = RUS_Our_Shunned_History
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Corruption_Within_Our_Knowledge
+		}
+		relative_position_id = RUS_Corruption_Within_Our_Knowledge
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##我们所梦想的未来
+	focus = {
+		id = RUS_Our_Envisioned_Tomorrow
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Our_Shunned_History
+		}
+		relative_position_id = RUS_Our_Shunned_History
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##熠熠生辉的人民权利...
+	focus = {
+		id = RUS_Resplendent_Peoples_Rights
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Correcting_Errors_by_Our_Resolve
+		}
+		relative_position_id = RUS_Correcting_Errors_by_Our_Resolve
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##...由苏维埃来确保
+	focus = {
+		id = RUS_Ensured_by_the_Soviets
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Resplendent_Peoples_Rights
+		}
+		relative_position_id = RUS_Resplendent_Peoples_Rights
+		mutually_exclusive = {
+			focus = RUS_Secured_by_Constitutional_Democracy
+		}
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##术业有专攻
+	focus = {
+		id = RUS_Specialization_in_Every_Field
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Ensured_by_the_Soviets
+		}
+		relative_position_id = RUS_Ensured_by_the_Soviets
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##不再迷茫于左右
+	focus = {
+		id = RUS_Transcending_the_Ideological_Divide
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Specialization_in_Every_Field
+		}
+		relative_position_id = RUS_Specialization_in_Every_Field
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##而今迈步从头越
+	focus = {
+		id = RUS_Starting_Anew_with_Bold_Strides
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Transcending_the_Ideological_Divide
+		}
+		relative_position_id = RUS_Transcending_the_Ideological_Divide
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##真正的人民民主
+	focus = {
+		id = RUS_Authentic_Popular_Sovereignty
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Starting_Anew_with_Bold_Strides
+		}
+		relative_position_id = RUS_Starting_Anew_with_Bold_Strides
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##...由民主宪法来保证
+	focus = {
+		id = RUS_Secured_by_Constitutional_Democracy
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Resplendent_Peoples_Rights
+		}
+		relative_position_id = RUS_Resplendent_Peoples_Rights
+		mutually_exclusive = {
+			focus = RUS_Ensured_by_the_Soviets
+		}
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##人人皆平等
+	focus = {
+		id = RUS_Universal_Equality_for_All
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Secured_by_Constitutional_Democracy
+		}
+		relative_position_id = RUS_Secured_by_Constitutional_Democracy
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##不再徘徊于过去
+	focus = {
+		id = RUS_Transcending_Historical_Sorrow
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Universal_Equality_for_All
+		}
+		relative_position_id = RUS_Universal_Equality_for_All
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##玫瑰易名，芳香如故
+	focus = {
+		id = RUS_New_Names_Eternal_Essence
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Transcending_Historical_Sorrow
+		}
+		relative_position_id = RUS_Transcending_Historical_Sorrow
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##可靠的民主制度
+	focus = {
+		id = RUS_Reliable_Democratic_System
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_New_Names_Eternal_Essence
+		}
+		relative_position_id = RUS_New_Names_Eternal_Essence
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	##民主进步的祖国
+	focus = {
+		id = RUS_Our_Democratic_and_Progressive_Motherland
+		icon = GFX_goal_DKB_Liberation_Arm
+		prerequisite = {
+			focus = RUS_Authentic_Popular_Sovereignty
+			focus = RUS_Reliable_Democratic_System
+		}
+		prerequisite = {
+			focus = RUS_Our_Envisioned_Tomorrow
+		}
+		relative_position_id = RUS_Reliable_Democratic_System
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+}

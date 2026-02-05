@@ -1,0 +1,98 @@
+
+spriteTypes = {
+###  意识形态
+	spriteType = {
+		name = "GFX_ideology_UKR_fascism_ideology"
+		texturefile = "gfx/interface/ideologies/subideologies/UKR_fascism_ideology.png"
+	}
+###  头像
+	spriteType = {
+		name = "GFX_kaduoke"
+		texturefile = "gfx/leaders/UKR/kaduoke.png"
+	}
+	spriteType = {
+		name = "GFX_UKR_Kornilov"
+		texturefile = "gfx/leaders/UKR/Kornilov.dds"
+	}
+	spriteType = {
+		name = "GFX_RUS_Kazembek"
+		texturefile = "gfx/leaders/UKR/Kazembek.dds"
+	}
+###  GUI
+	spriteType = {
+		name = "GFX_UKR_Inevitable_war_bg"
+		texturefile = "gfx/interface/gui/UKR/UKR_Inevitable_war_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_UKR_info1"
+		texturefile = "gfx/interface/mainpage/UKR_info1.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info2"
+		texturefile = "gfx/interface/mainpage/UKR_info2.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info3"
+		texturefile = "gfx/interface/mainpage/UKR_info3.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info4"
+		texturefile = "gfx/interface/mainpage/UKR_info4.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info5"
+		texturefile = "gfx/interface/mainpage/UKR_info5.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info6"
+		texturefile = "gfx/interface/mainpage/UKR_info6.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info7"
+		texturefile = "gfx/interface/mainpage/UKR_info7.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_UKR_info0"
+		texturefile = "gfx/interface/mainpage/UKR_info0.dds"
+		transparencecheck = yes
+	}
+	frameanimatedspritetype = {
+		name = "GFX_Anastasia_condition_1"
+		texturefile = "gfx/interface/gui/UKR/Anastasia_condition_1.dds"
+		noofframes = 44
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
+	frameanimatedspritetype = {
+		name = "GFX_Anastasia_condition_2"
+		texturefile = "gfx/interface/gui/UKR/Anastasia_condition_2.dds"
+		noofframes = 44
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
+	frameanimatedspritetype = {
+		name = "GFX_Anastasia_condition_3"
+		texturefile = "gfx/interface/gui/UKR/Anastasia_condition_3.dds"
+		noofframes = 44
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
+	frameanimatedspritetype = {
+		name = "GFX_Anastasia_condition_4"
+		texturefile = "gfx/interface/gui/UKR/Anastasia_condition_4.dds"
+		noofframes = 44
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
+}
