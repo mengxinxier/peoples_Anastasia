@@ -4,6 +4,8 @@ UKR_remove_all_ideas = {
 			UKR_kaduoke_idea
 			UKR_Kornilov_idea
 			RUS_Kazembek_idea
+			RUS_Anastasia_sick_idea
+			RUS_Anastasia_idea
 		}
 	}
 }
@@ -338,11 +340,6 @@ UKR_become_great_end = {
 		remove_ideas = UKR_recover_land_enthusiasm1a
 		remove_ideas = UKR_recover_land_enthusiasm1b
 		remove_ideas = UKR_recover_land_enthusiasm2
-		add_ideas =  RUS_Left_wing_education
-		add_ideas =  RUS_inefficient_bureaucracy
-		add_ideas =  RUS_general_strike
-		add_ideas =  RUS_bolshevik_rebellion
-		add_ideas = SOV_lack_of_food1
 	}
 }
 

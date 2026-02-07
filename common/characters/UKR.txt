@@ -8,7 +8,7 @@ characters = {
 			}
 			army = {
 				small = "gfx/leaders/UKR/advisors/Anastasia.dds"
-				large = "gfx/leaders/UKR/Anastasia.dds"
+				large = "gfx/leaders/UKR/Anastasia_army.dds"
 			}
 		}
 		country_leader = {
@@ -112,11 +112,11 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 		}
-		country_leader = {
-			ideology = Monarchical_socialism
-			traits = {  }
-			expire = "1965.1.1"
-		}
+		# country_leader = {
+		# 	ideology = Monarchical_socialism
+		# 	traits = {  }
+		# 	expire = "1965.1.1"
+		# }
 	}
 
 	SOV_Mudrock = {
@@ -255,11 +255,11 @@ characters = {
 			traits = { minister_of_the_interior_abate }
 			cost = 150
 		}
-		country_leader = {
-			ideology = socialism
-			traits = { resolute_social_democrat }
-			expire = "1965.1.1"
-		}
+		# country_leader = {
+		# 	ideology = socialism
+		# 	traits = { resolute_social_democrat }
+		# 	expire = "1965.1.1"
+		# }
 	}
 
     SOV_Meretskov = {
@@ -318,7 +318,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = Sakuraism_subideology
+			ideology = leninism
 			traits = { reluctant_stalinist }
 			expire = "1965.1.1"
 		}
@@ -1137,7 +1137,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = oligarchism
+			ideology = Guided_democracy
 			traits = {  }
 			expire = "1965.1.1"
 		}
@@ -1701,6 +1701,19 @@ characters = {
 			planning_skill = 5
 			logistics_skill = 1
 			legacy_id = -1
+		}
+	}
+	RUS_Kazembek = {  ##亚莉山大·卡津别克
+		name = "RUS_Kazembek"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UKR/Kazembek.dds"
+				small = "gfx/leaders/UKR/advisors/idea_Kazembek.dds"
+			}
+			army = {
+				large = "gfx/leaders/UKR/Kazembek.dds"
+				small = "gfx/leaders/UKR/advisors/idea_Kazembek.dds"
+			}
 		}
 	}
 }

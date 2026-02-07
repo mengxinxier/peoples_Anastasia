@@ -290,7 +290,15 @@ recruit_character = UKR_duma
 recruit_character = UKR_Cosette
 recruit_character = UKR_wagena2
 recruit_character = UKR_Kornilov
+recruit_character = UKR_putin
+recruit_character = RUS_Kazembek
+
 activate_advisor = UKR_kaduoke
+
+create_intelligence_agency = {
+    name = "帝国特勤局"
+    icon = GFX_intelligence_agency_logo_DVL_SST
+}
 
 #####  军队和库存  #####
 

@@ -19,6 +19,18 @@ defined_text = {
 		}
 		localization_key = GFX_RUS_Kazembek
 	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_sick_idea
+		}
+		localization_key = GFX_RUS_Anastasia_sick
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_idea
+		}
+		localization_key = GFX_RUS_Anastasia3
+	}
 	##通用
 	text = {
 		localization_key = GFX_leader_unknown
@@ -45,6 +57,18 @@ defined_text = {
 			has_idea = RUS_Kazembek_idea
 		}
 		localization_key = RUS_Kazembek
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_sick_idea
+		}
+		localization_key = RUS_Anastasia
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_idea
+		}
+		localization_key = RUS_Anastasia
 	}
 	##通用
 	text = {
@@ -73,6 +97,18 @@ defined_text = {
 		}
 		localization_key = RUS_Kazembek_pol_desc
 	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_sick_idea
+		}
+		localization_key = RUS_Anastasia_sick_pol_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_idea
+		}
+		localization_key = RUS_Anastasia_pol_desc
+	}
 }
 
 ####另外一位国家领袖介绍--姓名及buff--外交界面
@@ -96,6 +132,18 @@ defined_text = {
 		}
 		localization_key = RUS_Kazembek_dip_desc
 	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_sick_idea
+		}
+		localization_key = RUS_Anastasia_sick_dip_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_idea
+		}
+		localization_key = RUS_Anastasia_dip_desc
+	}
 }
 
 ##另外一位国家领袖介绍--生平
@@ -118,5 +166,17 @@ defined_text = {
 			has_idea = RUS_Kazembek_idea
 		}
 		localization_key = RUS_Kazembek_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_sick_idea
+		}
+		localization_key = RUS_Anastasia_sick_desc
+	}
+	text = {
+		trigger = {
+			has_idea = RUS_Anastasia_idea
+		}
+		localization_key = RUS_Anastasia_desc2
 	}
 }

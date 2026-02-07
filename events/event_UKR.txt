@@ -326,6 +326,7 @@ add_namespace = test_event
 		picture = GFX_report_event_UKR_24
 		option = {
 			name = ukr_politics.9.a
+			set_party_name = { ideology = neutrality long_name = RUS_imperial_transition_government_party name = RUS_imperial_transition_government_party }
 			if = {
 				limit = {
 					219 = {
@@ -369,6 +370,7 @@ add_namespace = test_event
 				EAM = { country_event = { id = ukr_politics.29 days = 25 } }
 				country_event = { id = rus_na.46 days = 7 }
 			}
+			set_country_leader_ideology = interim_government_subtype
 		}
 	}
 	
@@ -1396,6 +1398,12 @@ add_namespace = test_event
 					days = 1
 				}
 			}
+			set_portraits = {
+				character = SOV_Anastasia
+				civilian = {
+					large = "gfx/leaders/UKR/Anastasia_army.dds"
+				}
+			}
 			ai_chance = {
 				base = 5
 			}
@@ -1465,6 +1473,11 @@ add_namespace = test_event
 				add_ideas = partial_economic_mobilisation
 				load_focus_tree = { tree = RUS_focus_from_UKR keep_completed = yes }
 				custom_effect_tooltip = UKR_Russia_back_tt
+				add_ideas =  RUS_Left_wing_education
+				add_ideas =  RUS_inefficient_bureaucracy
+				add_ideas =  RUS_general_strike
+				add_ideas =  RUS_bolshevik_rebellion
+				add_ideas = SOV_lack_of_food1
 			}
 			ai_chance = {
 				base = 5
@@ -1590,19 +1603,31 @@ add_namespace = test_event
 			set_party_name = { ideology = democratic long_name = ban_the_party name = ban_the_party }
 			set_party_name = { ideology = communism long_name = ban_the_party name = ban_the_party }
 			set_party_name = { ideology = neutrality long_name = ban_the_party name = ban_the_party }
-			custom_effect_tooltip = change_country_leader_description
-			set_country_leader_description = {
-				ideology = fascism
-				desc = RUS_Anastasia_fascism_desc
-			}
-			set_portraits = {
-				character = SOV_Anastasia
-				civilian = {
-					large = "gfx/leaders/UKR/Anastasia2.dds"
+			UKR_Kornilov = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = "UKR_Kornilov_desc"
+						ideology = fascism_ideology
+						traits = { UKR_marching_toward_the_New_Order_trait }
+						expire = "1999.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
 				}
 			}
+			# custom_effect_tooltip = change_country_leader_description
+			# set_country_leader_description = {
+			# 	ideology = fascism
+			# 	desc = RUS_Anastasia_fascism_desc
+			# }
+			# set_portraits = {
+			# 	character = SOV_Anastasia
+			# 	civilian = {
+			# 		large = "gfx/leaders/UKR/Anastasia2.dds"
+			# 	}
+			# }
 			UKR_remove_all_ideas = yes
-			add_ideas = UKR_Kornilov_idea
+			add_ideas = RUS_Anastasia_sick_idea
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.56
@@ -1776,8 +1801,23 @@ add_namespace = test_event
 		#picture = GFX_report_event_soldiers_marching
 		option = {
 			name = ukr_politics.63.a
+			UKR_gaoyangsikaya = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = ""
+						ideology = interim_government_subtype
+						traits = {}
+						expire = "1999.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
+				}
+			}
 			UKR_remove_all_ideas = yes
 			add_ideas = UKR_kaduoke_idea
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			set_party_name = { ideology = fascism name = RUS_remnants_of_the_National_Alliance_party long_name = RUS_remnants_of_the_National_Alliance_party }
+			set_party_name = { ideology = neutrality long_name = RUS_imperial_transition_government_party name = RUS_imperial_transition_government_party }
 			UKR_Kornilov = { set_nationality = SIB }
 			SOV_Savenkov = { set_nationality = SIB }
 			UKR_rpk16 = { set_nationality = SIB }
@@ -1785,15 +1825,21 @@ add_namespace = test_event
 				SIB = {
 					set_politics = { ruling_party = fascism }
 					UKR_Kornilov = {
-						add_country_leader_role = {
-							country_leader = {
-								desc = ""
-								ideology = fascism_ideology
-								traits = {}
-								expire = "1999.1.1.1"
-								id = -1
+						if = {
+							limit = { can_be_country_leader = yes }
+							SIB = { promote_character = UKR_Kornilov }
+						}
+						else = {
+							add_country_leader_role = {
+								country_leader = {
+									desc = "UKR_Kornilov_desc"
+									ideology = fascism_ideology
+									traits = { UKR_marching_toward_the_New_Order_trait }
+									expire = "1999.1.1.1"
+									id = -1
+								}
+								promote_leader = yes
 							}
-							promote_leader = yes
 						}
 					}
 					set_cosmetic_tag = SIB_provisional_headquarters
@@ -1833,19 +1879,25 @@ add_namespace = test_event
 		option = {
 			name = ukr_politics.65.a
 			custom_effect_tooltip = ukr_politics.65.tt
-			Cut_RUS_Fragmented_Legacy_of_National_Industry = yes
-			SOV_Anastasia = {
-				add_country_leader_role = {
-					country_leader = {
-						desc = "RUS_Anastasia_desc2"
-						ideology = Monarchical_socialism
-						traits = { UKR_bingzhihuangnv_trait }
-						expire = "1999.1.1.1"
-						id = -1
+			RUS_Kazembek = {
+				if = {
+					limit = { can_be_country_leader = yes }
+					SIB = { promote_character = RUS_Kazembek }
+				}
+				else = {
+					add_country_leader_role = {
+						country_leader = {
+							desc = "RUS_Kazembek_desc"
+							ideology = Monarchical_socialism
+							traits = { UKR_political_rising_star_trait }
+							expire = "1999.1.1.1"
+							id = -1
+						}
+						promote_leader = yes
 					}
-					promote_leader = yes
 				}
 			}
+			Cut_RUS_Fragmented_Legacy_of_National_Industry = yes
 			set_politics = { ruling_party = communism elections_allowed = no }
 			add_popularity = { ideology = communism popularity = 0.3 }
 			set_party_name = { ideology = communism long_name = RUS_Youth_Octobrist_Party_long name = RUS_Youth_Octobrist_Party }
@@ -1853,14 +1905,14 @@ add_namespace = test_event
 			custom_effect_tooltip = new_foucs_is_ready
 			mark_focus_tree_layout_dirty = yes
 			UKR_remove_all_ideas = yes
-			add_ideas = RUS_Kazembek_idea
+			add_ideas = RUS_Anastasia_idea
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.66
 					days = 1
 				}
 				news_event = {
-					id = rus_news.24
+					id = rus_news.25
 				}
 			}
 			ai_chance = {
@@ -1890,27 +1942,40 @@ add_namespace = test_event
 		picture = GFX_news_event_Anastasia_back
 		major = yes
 		is_triggered_only = yes
-	option = {
-		name = rus_news.1.a
-		trigger = {
-		OR = {
-		has_government = neutrality
-		has_government = fascism
+		option = {
+			name = rus_news.1.a
+			trigger = {
+				tag = UKR
 			}
 		}
-	}	
-	option = {
-		name = rus_news.1.b
-		trigger = {
-		has_government = democratic
+		option = {
+			name = rus_news.1.b
+			trigger = {
+				has_government = democratic
+				not = { tag = UKR }
+			}
+		}	
+		option = {
+			name = rus_news.1.c
+			trigger = {
+				has_government = communism
+				not = { tag = UKR }
+			}
 		}
-	}	
-	option = {
-		name = rus_news.1.c
-		trigger = {
-		has_government = communism
+		option = {
+			name = rus_news.1.e
+			trigger = {
+				has_government = neutrality
+				not = { tag = UKR }
+			}
 		}
-	}
+		option = {
+			name = rus_news.1.f
+			trigger = {
+				has_government = fascism
+				not = { tag = UKR }
+			}
+		}
 	}	
 	#瓦尔基里政变
 	news_event = {
@@ -2478,7 +2543,7 @@ add_namespace = test_event
 		id = rus_news.24
 		title = rus_news.24.t
 		desc = rus_news.24.d
-		#picture = GFX_UKR_news_event_012
+		picture = GFX_news_imperial_palace_coup
 		major = yes
 		is_triggered_only = yes
 		option = {
@@ -2507,7 +2572,7 @@ add_namespace = test_event
 		id = rus_news.25
 		title = rus_news.25.t
 		desc = rus_news.25.d
-		#picture = GFX_UKR_news_event_012
+		picture = GFX_news_youth_octobrist_party
 		major = yes
 		is_triggered_only = yes
 		option = {
@@ -5676,5 +5741,22 @@ add_namespace = test_event
 			name = RUS_stepping_into_shadows
 			set_country_flag = RUS_stepping_into_shadows_visible
 			activate_mission = RUS_stepping_into_shadows_decision
+		}
+		option = {
+			name = SOV_Anastasia
+			add_field_marshal_role = {
+				character = SOV_Anastasia
+				skill = 3
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 3
+				traits = {
+					media_personality
+					inflexible_strategist
+					organizer
+					inspirational_leader
+				}
+			}
 		}
 	}

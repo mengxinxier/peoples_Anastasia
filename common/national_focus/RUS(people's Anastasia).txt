@@ -360,6 +360,18 @@ focus_tree = {
 					large = "gfx/leaders/UKR/Anastasia3.dds"
 				}
 			}
+			RUS_Kazembek = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = "RUS_Kazembek_desc"
+						ideology = Monarchical_socialism
+						traits = { UKR_political_rising_star_trait }
+						expire = "1999.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
+				}
+			}
 		}
 	}
 	##曙光初现

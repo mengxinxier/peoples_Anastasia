@@ -74,6 +74,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				drift_defence_factor = -0.1
+				surrender_limit = 0.1
 			}
 		}
 		UKR_Kornilov_idea = {
@@ -92,6 +97,38 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+			}
+		}
+		RUS_Anastasia_sick_idea = {
+			name = RUS_Anastasia
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.3
+				war_support_factor = -0.1
+				conscription_factor = 0.05
+				drift_defence_factor = 0.1
+				winter_attrition_factor = -0.1
+				acclimatization_cold_climate_gain_factor = 0.15
+				stability_factor = -0.1
+				political_power_cost = 0.5
+			}
+		}
+		RUS_Anastasia_idea = {
+			name = RUS_Anastasia
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.3
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+				drift_defence_factor = 0.1
+				winter_attrition_factor = -0.1
+				acclimatization_cold_climate_gain_factor = 0.15
 			}
 		}
 	}

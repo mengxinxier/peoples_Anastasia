@@ -5,6 +5,15 @@ spriteTypes = {
 		name = "GFX_ideology_UKR_fascism_ideology"
 		texturefile = "gfx/interface/ideologies/subideologies/UKR_fascism_ideology.png"
 	}
+###  事件
+	spriteType = {
+		name = "GFX_news_imperial_palace_coup"
+		texturefile = "gfx/event_pictures/UKR/news_imperial_palace_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_news_youth_octobrist_party"
+		texturefile = "gfx/event_pictures/UKR/news_youth_octobrist_party.dds"
+	}
 ###  头像
 	spriteType = {
 		name = "GFX_kaduoke"
@@ -17,6 +26,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_RUS_Kazembek"
 		texturefile = "gfx/leaders/UKR/Kazembek.dds"
+	}
+	spriteType = {
+		name = "GFX_RUS_Anastasia2"
+		texturefile = "gfx/leaders/UKR/Anastasia2.dds"
+	}
+	spriteType = {
+		name = "GFX_RUS_Anastasia3"
+		texturefile = "gfx/leaders/UKR/Anastasia3.dds"
+	}
+	spriteType = {
+		name = "GFX_RUS_Anastasia_sick"
+		texturefile = "gfx/leaders/UKR/Anastasia_sick.dds"
 	}
 ###  GUI
 	spriteType = {
