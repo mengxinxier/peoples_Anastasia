@@ -31,6 +31,16 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.05
+			add_to_variable = { Peoples_Support_var = 5 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
 		}
 	}
 	focus = {
@@ -136,7 +146,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
-			country_event = ukr_politics.38
+			#country_event = ukr_politics.38
 		}
 	}
 	focus = {
@@ -182,6 +192,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = UKR_zhenyaoun
+			add_to_variable = { Peoples_Support_var = -10 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
 		}
 	}
 	focus = {
@@ -209,6 +229,24 @@ focus_tree = {
 				remove_idea = UKR_waerjili
 				add_idea = UKR_waerjili_2
 			}
+			add_to_variable = { Peoples_Support_var = -5 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
+			add_to_variable = { Weapon_stockpile_var = 5 tooltip = Weapon_stockpile_var_change_tt }
+			clamp_variable = {
+				var = Weapon_stockpile_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_wsm_army_attack_factor_var = Weapon_stockpile_var }
+			divide_variable = { ukr_wsm_army_attack_factor_var = 500 }
 		}
 	}
 	focus = {
@@ -473,6 +511,14 @@ focus_tree = {
 			add_political_power = 150
 			army_experience = 50
 			add_command_power = 60
+			add_to_variable = { Weapon_stockpile_var = 5 tooltip = Weapon_stockpile_var_change_tt }
+			clamp_variable = {
+				var = Weapon_stockpile_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_wsm_army_attack_factor_var = Weapon_stockpile_var }
+			divide_variable = { ukr_wsm_army_attack_factor_var = 500 }
 		}
 	}
 	focus = {
@@ -634,6 +680,14 @@ focus_tree = {
 					level = 2
 				}
 			}
+			add_to_variable = { Weapon_stockpile_var = 15 tooltip = Weapon_stockpile_var_change_tt }
+			clamp_variable = {
+				var = Weapon_stockpile_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_wsm_army_attack_factor_var = Weapon_stockpile_var }
+			divide_variable = { ukr_wsm_army_attack_factor_var = 500 }
 		}
 	}
 	focus = {
@@ -1069,6 +1123,16 @@ focus_tree = {
 			add_war_support = 0.05
 			add_ideas = UKR_recover_land_enthusiasm
 			custom_effect_tooltip = UKR_youqingtishi_tip
+			add_to_variable = { Peoples_Support_var = 10 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
 		}
 	}
 	focus = {
@@ -1131,6 +1195,24 @@ focus_tree = {
 					}
 				}
 			}
+			add_to_variable = { Peoples_Support_var = -10 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
+			add_to_variable = { Weapon_stockpile_var = 15 tooltip = Weapon_stockpile_var_change_tt }
+			clamp_variable = {
+				var = Weapon_stockpile_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_wsm_army_attack_factor_var = Weapon_stockpile_var }
+			divide_variable = { ukr_wsm_army_attack_factor_var = 500 }
 		}
 	}
 	focus = {
@@ -1225,6 +1307,16 @@ focus_tree = {
 					inspirational_leader
 				}
 			}
+			add_to_variable = { Peoples_Support_var = 20 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
 		}
 	}
 	focus = {
@@ -1318,6 +1410,24 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = UKR_nationalist_front_tt
+			add_to_variable = { Peoples_Support_var = 10 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
+			add_to_variable = { Weapon_stockpile_var = -5 tooltip = Weapon_stockpile_var_change_tt }
+			clamp_variable = {
+				var = Weapon_stockpile_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_wsm_army_attack_factor_var = Weapon_stockpile_var }
+			divide_variable = { ukr_wsm_army_attack_factor_var = 500 }
 		}
 	}
 	focus = {
@@ -1345,6 +1455,16 @@ focus_tree = {
 				add_planning = 1
 				add_logistics = 1
 			}
+			add_to_variable = { Peoples_Support_var = 10 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
 		}
 	}
 	focus = {
@@ -1484,6 +1604,14 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_ideas = UKR_supply_channel
+			add_to_variable = { Weapon_stockpile_var = 15 tooltip = Weapon_stockpile_var_change_tt }
+			clamp_variable = {
+				var = Weapon_stockpile_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_wsm_army_attack_factor_var = Weapon_stockpile_var }
+			divide_variable = { ukr_wsm_army_attack_factor_var = 500 }
 		}
 	}
 	focus = {
@@ -1554,6 +1682,16 @@ focus_tree = {
 				remove_ideas = UKR_recover_land_enthusiasm2
 				add_ideas = Ukrainian_revanchism
 			}
+			add_to_variable = { Peoples_Support_var = 30 tooltip = Peoples_Support_var_change_tt }
+			clamp_variable = {
+				var = Peoples_Support_var
+				min = 0
+				max = 100
+			}
+			set_variable = { ukr_psm_stability_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_stability_factor = 400 }
+			set_variable = { ukr_psm_political_power_factor = Peoples_Support_var }
+			divide_variable = { ukr_psm_political_power_factor = 500 }
 		}
 	}
 	focus = {

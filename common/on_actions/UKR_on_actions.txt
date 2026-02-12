@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			UKR = {
+				hidden_effect = {
+					country_event = {
+						id = ukr_politics.67
+						days = 3
+					}
+				}
+			}
+		}
+	}
+}

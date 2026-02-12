@@ -61,6 +61,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.50
+				days = 1
 			}
 		}
 	}
@@ -103,6 +104,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.51
+				days = 1
 			}
 		}
 	}
@@ -125,6 +127,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.52
+				days = 1
 			}
 		}
 	}
@@ -147,6 +150,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.53
+				days = 1
 			}
 		}
 	}
@@ -323,7 +327,11 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.63
+				days = 1
 			}
+			219 = { set_demilitarized_zone = no }
+			195 = { set_demilitarized_zone = no }
+			202 = { set_demilitarized_zone = no }
 		}
 	}
 	##破晓时分
@@ -393,6 +401,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.64
+				days = 1
 			}
 		}
 	}
@@ -415,6 +424,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = ukr_politics.65
+				days = 1
 			}
 		}
 	}
@@ -436,9 +446,12 @@ focus_tree = {
 			factor = 50
 		}
 		available = {
+			has_country_flag = RUS_The_Long_Night_available
 		}
 		completion_reward = {
+			custom_effect_tooltip = RUS_The_Long_Night_tt
 		}
+		cancelable = no
 	}
 	##崭新起点
 	focus = {

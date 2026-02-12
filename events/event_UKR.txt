@@ -28,7 +28,7 @@ add_namespace = test_event
 			country_event = { id = ukr_politics.12 days = 60 } 
 			country_event = { id = ukr_politics.34 days = 10 } 
 			country_event = { id = ukr_politics.35 days = 30 } 
-			country_event = { id = ukr_politics.36 days = 40 } 
+			#country_event = { id = ukr_politics.36 days = 40 } 
 			}
 		}
 	}
@@ -247,7 +247,7 @@ add_namespace = test_event
 		option = {
 			name = ukr_politics.5.a
 			ai_chance = { base = 75 }
-			UKR = { country_event = { id = ukr_politics.6 days = 3 } }
+			UKR = { country_event = { id = ukr_politics.47 days = 3 } }
 			add_political_power = -15
 			hidden_effect = {
 				set_country_flag = UKR_stop_support_from_ENG
@@ -368,7 +368,7 @@ add_namespace = test_event
 				else = { news_event = rus_news.1 }
 				SIB = { country_event = { id = ukr_politics.28 days = 15 } }
 				EAM = { country_event = { id = ukr_politics.29 days = 25 } }
-				country_event = { id = rus_na.46 days = 7 }
+				#country_event = { id = rus_na.46 days = 7 }
 			}
 			set_country_leader_ideology = interim_government_subtype
 		}
@@ -1234,14 +1234,14 @@ add_namespace = test_event
 		id = ukr_politics.40
 		title = ukr_politics.40.t
 		fire_only_once = yes
-		trigger = {
-		tag = UKR
-		has_war_with = SOV 
-		has_country_flag = UKR_waerjilihezuo
-		is_subject = no
-		has_government = neutrality
-		}
-	
+		# trigger = {
+		# tag = UKR
+		# has_war_with = SOV 
+		# has_country_flag = UKR_waerjilihezuo
+		# is_subject = no
+		# has_government = neutrality
+		# }
+		is_triggered_only = yes
 		mean_time_to_happen = {
 			days = 5
 		}
@@ -1392,12 +1392,12 @@ add_namespace = test_event
 			unlock_decision_category_tooltip = UKR_Exaggerate_frontline_successes
 			unlock_decision_category_tooltip = UKR_Salute_to_heroes
 			unlock_decision_category_tooltip = UKR_Barrier_troops_ready
-			hidden_effect = {
-				country_event = {
-					id = ukr_politics.47
-					days = 1
-				}
-			}
+			# hidden_effect = {
+			# 	country_event = {
+			# 		id = ukr_politics.47
+			# 		days = 1
+			# 	}
+			# }
 			set_portraits = {
 				character = SOV_Anastasia
 				civilian = {
@@ -1419,8 +1419,17 @@ add_namespace = test_event
 		#picture = GFX_report_event_soldiers_marching
 		option = {
 			name = ukr_politics.47.a
-			add_political_power = -20
+			set_country_flag = UKR_cupists_betrayed_us
+			remove_ideas = UKR_foreign_support
+			add_political_power = -15
 			add_war_support = -0.05
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
 			ai_chance = {
 				base = 5
 			}
@@ -1468,6 +1477,8 @@ add_namespace = test_event
 					}
 				}
 				load_focus_tree = { tree = RUS_focus_people_Anastasia keep_completed = yes }
+				remove_all_power_balance_modifiers = { id = UKR_power_balance }
+				remove_power_balance = { id = UKR_power_balance }
 			}
 			else = {
 				add_ideas = partial_economic_mobilisation
@@ -1631,6 +1642,7 @@ add_namespace = test_event
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.56
+					days = 1
 				}
 			}
 			ai_chance = {
@@ -1664,9 +1676,12 @@ add_namespace = test_event
 			name = ukr_politics.56.b
 			custom_effect_tooltip = ukr_politics.56.t2
 			hidden_effect = {
+				news_event = {
+					id = rus_news.22
+				}
 				country_event = {
 					id = ukr_politics.58
-					days = 1
+					days = 4
 				}
 				complete_national_focus = RUS_Blood_on_Red_Square
 			}
@@ -1740,12 +1755,12 @@ add_namespace = test_event
 		#picture = GFX_report_event_soldiers_marching
 		option = {
 			name = ukr_politics.60.a
-			load_focus_tree = generic_focus
 			hidden_effect = {
 				news_event = {
 					id = rus_news.23
 				}
 			}
+			set_country_flag = RUS_The_Long_Night_available
 			ai_chance = {
 				base = 5
 			}
@@ -1780,7 +1795,7 @@ add_namespace = test_event
 		#picture = GFX_report_event_soldiers_marching
 		option = {
 			name = ukr_politics.62.a
-			load_focus_tree = generic_focus
+			set_country_flag = RUS_The_Long_Night_available
 			hidden_effect = {
 				news_event = {
 					id = rus_news.24
@@ -1930,6 +1945,91 @@ add_namespace = test_event
 		#picture = GFX_report_event_soldiers_marching
 		option = {
 			name = ukr_politics.66.a
+		}
+	}
+	#1721年的残影
+	country_event = {
+		id = ukr_politics.67
+		title = ukr_politics.67.t
+		is_triggered_only = yes
+		fire_only_once = yes
+		desc = ukr_politics.67.d
+		#picture = GFX_report_event_soldiers_marching
+		option = {
+			name = ukr_politics.67.a
+			hidden_effect = {
+				country_event = {
+					id = ukr_politics.68
+					days = 3
+				}
+			}
+		}
+	}
+	#1825年的幻梦
+	country_event = {
+		id = ukr_politics.68
+		title = ukr_politics.68.t
+		is_triggered_only = yes
+		fire_only_once = yes
+		desc = ukr_politics.68.d
+		#picture = GFX_report_event_soldiers_marching
+		option = {
+			name = ukr_politics.68.a
+			hidden_effect = {
+				country_event = {
+					id = ukr_politics.69
+					days = 3
+				}
+			}
+		}
+	}
+	#1917年的呼唤（上）
+	country_event = {
+		id = ukr_politics.69
+		title = ukr_politics.69.t
+		is_triggered_only = yes
+		fire_only_once = yes
+		desc = ukr_politics.69.d
+		#picture = GFX_report_event_soldiers_marching
+		option = {
+			name = ukr_politics.69.a
+			hidden_effect = {
+				country_event = {
+					id = ukr_politics.70
+					days = 3
+				}
+			}
+		}
+	}
+	#1917年的呼唤（下）
+	country_event = {
+		id = ukr_politics.70
+		title = ukr_politics.70.t
+		is_triggered_only = yes
+		fire_only_once = yes
+		desc = ukr_politics.70.d
+		#picture = GFX_report_event_soldiers_marching
+		option = {
+			name = ukr_politics.70.a
+			hidden_effect = {
+				country_event = {
+					id = ukr_politics.71
+					days = 3
+				}
+			}
+		}
+	}
+	#1919年的刺刀
+	country_event = {
+		id = ukr_politics.71
+		title = ukr_politics.71.t
+		is_triggered_only = yes
+		fire_only_once = yes
+		desc = ukr_politics.71.d
+		#picture = GFX_report_event_soldiers_marching
+		option = {
+			name = ukr_politics.71.a
+			custom_effect_tooltip = ukr_politics.71.tt
 		}
 	}
 

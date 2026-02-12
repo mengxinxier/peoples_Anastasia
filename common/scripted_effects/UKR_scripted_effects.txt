@@ -111,7 +111,7 @@ UKR_become_great = {
 	set_cosmetic_tag = RUS_junta
 	}
 	else = {
-	set_cosmetic_tag = russia_green
+	set_cosmetic_tag = russia
 	}
 	every_state = {
 		limit = { is_core_of = SOV }
