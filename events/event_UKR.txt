@@ -1960,7 +1960,7 @@ add_namespace = test_event
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.68
-					days = 3
+					#days = 3
 				}
 			}
 		}
@@ -1978,7 +1978,7 @@ add_namespace = test_event
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.69
-					days = 3
+					#days = 3
 				}
 			}
 		}
@@ -1996,7 +1996,7 @@ add_namespace = test_event
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.70
-					days = 3
+					#days = 3
 				}
 			}
 		}
@@ -2014,7 +2014,7 @@ add_namespace = test_event
 			hidden_effect = {
 				country_event = {
 					id = ukr_politics.71
-					days = 3
+					#days = 3
 				}
 			}
 		}
